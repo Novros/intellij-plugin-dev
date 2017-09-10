@@ -1,11 +1,11 @@
 <idea-plugin>
-    <id>cz.novros.intellij.example.hello-action</id>
-    <name>Hello action plugin</name>
+    <id>cz.novros.intellij.example.hello-toolbar</id>
+    <name>Hello toolbar</name>
     <version>1.0</version>
     <vendor email="rostislav.novak92@gmail.com" url="https://github.com/Novros">Novros</vendor>
 
     <description><![CDATA[
-       Example how to create action in intellij menu.
+        Simple example of hello from toolbar.
     ]]></description>
 
     <change-notes><![CDATA[
@@ -27,10 +27,12 @@
     </extensions>
 
     <actions>
-        <action id="cz.novros.intellij.example.HelloAction" class="cz.novros.intellij.example.HelloAction"
-                text="Hello action" description="Show simple message with hello.">
-            <add-to-group group-id="HelpMenu" anchor="first"/>
-        </action>
+        <!-- Add your actions here -->
     </actions>
 
+    <application-components>
+        <component>
+            <implementation-class>cz.novros.intellij.example.HelloToolbar</implementation-class>
+        </component>
+    </application-components>
 </idea-plugin>

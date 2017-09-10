@@ -1,5 +1,5 @@
 <idea-plugin>
-    <id>cz.novros.intellij.example</id>
+    <id>cz.novros.intellij.example.empty</id>
     <name>Empty plugin project</name>
     <version>1.0</version>
     <vendor email="rostislav.novak92@gmail.com" url="https://github.com/Novros">Novros</vendor>
