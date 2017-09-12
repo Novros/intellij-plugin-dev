@@ -1,0 +1,37 @@
+<idea-plugin>
+    <id>cz.novros.intellij.example.action-with-dialog</id>
+    <name>Example of action with dialog</name>
+    <version>1.0</version>
+    <vendor email="rostislav.novak92@gmail.com" url="https://github.com/Novros">Novros</vendor>
+
+    <description><![CDATA[
+        Simple example of action with dialog.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Created project.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="171.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="cz.novros.intellij.example.ProjectInfoAction" class="cz.novros.intellij.example.ProjectInfoAction"
+                text="Project information" description="Show information about project">
+            <add-to-group group-id="HelpMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
