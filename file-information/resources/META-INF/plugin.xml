@@ -1,0 +1,44 @@
+<idea-plugin>
+    <id>cz.novros.intellij.example.custom_action</id>
+    <name>Custom action plugin</name>
+    <version>1.0</version>
+    <vendor email="rostislav.novak92@gmail.com" url="https://github.com/Novros">Novros</vendor>
+
+    <description><![CDATA[
+        Example of simple custom action, which show information about opened file or file in project view.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Created project.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="171.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="cz.novros.intellij.example.custom_action.EditorToolsMenuAction"
+                class="cz.novros.intellij.example.custom_action.EditorToolsMenuAction" text="File information"
+                description="Our simple custom action to show something.">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="ctrl alt H"/>
+        </action>
+        <action id="cz.novros.intellij.example.custom_action.PopupMenuAction"
+                class="cz.novros.intellij.example.custom_action.PopupMenuAction" text="File information"
+                description="Show file information in dialog.">
+            <add-to-group group-id="ProjectViewPopupMenu" anchor="first"/>
+        </action>
+    </actions>
+
+</idea-plugin>
