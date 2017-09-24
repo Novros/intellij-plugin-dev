@@ -1,0 +1,34 @@
+<idea-plugin>
+    <id>cz.novros.intellij.example.empty-gradle</id>
+    <name>Empty gradle</name>
+    <version>1.0</version>
+    <vendor email="rostislav.novak92@gmail.com" url="https://github.com/novros">Novros</vendor>
+
+    <description><![CDATA[
+        Empty gradle project for developing intellij plugin.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Created empty gradle project.
+    ]]>
+    </change-notes>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+    <idea-version since-build="172.0"/>
+
+    <!-- please see http://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+         on how to target different products -->
+    <!-- uncomment to enable plugin in all products
+    <depends>com.intellij.modules.lang</depends>
+    -->
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+    </actions>
+
+    <application-components>
+    </application-components>
+
+</idea-plugin>
