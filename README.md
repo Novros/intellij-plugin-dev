@@ -9,3 +9,4 @@ This repository contains simple examples of Intellij plugins, which should help 
 * **Save state of plugin** - Simple plugin, which shows input dialog and input saves to intellij project storage.
 * **Action with dialog** - Simple plugin of showing project information in dialog and also show how to open file in editor.
 * **File information action** - Simple to show, how to hide or do some action before action will be visible in menu. Also this plugin shows how to display icon at action and popup menu action.
+* **Grouped actions** - Shows how to group actions by classical group, custom group and also dynamic group. Actions visibility are changed by opened file in editor (no file opened or opened one file).

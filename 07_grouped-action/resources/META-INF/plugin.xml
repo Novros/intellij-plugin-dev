@@ -1,0 +1,57 @@
+<idea-plugin>
+    <id>cz.novros.intellij.example.grouped_actions</id>
+    <name>Empty plugin project</name>
+    <version>1.0</version>
+    <vendor email="rostislav.novak92@gmail.com" url="https://github.com/Novros">Novros</vendor>
+
+    <description><![CDATA[
+        Example of grouped actions.
+    ]]></description>
+
+    <change-notes><![CDATA[
+        Created project.
+    ]]>
+    </change-notes>
+
+    <idea-version since-build="171.0"/>
+
+    <extensions defaultExtensionNs="com.intellij">
+    </extensions>
+
+    <actions>
+        <!-- One group for all action groups from this plugin. -->
+        <group id="GroupedActionsExample" text="Example of grouped actions" popup="true">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+        </group>
+
+        <!-- Simple group of actions, -->
+        <group id="SimpleGroup" text="Simple Action Group" popup="true">
+            <add-to-group group-id="GroupedActionsExample" anchor="last"/>
+            <!-- Empty action -->
+            <action class="cz.novros.intellij.example.grouped_actions.group.EmptyAction"
+                    id="cz.novros.intellij.example.grouped_actions.group.EmptyAction"
+                    text="Empty Action" description="Empty Action">
+            </action>
+        </group>
+
+        <!-- Custom class of group. -->
+        <group id="CustomDefaultActionGroup" class="cz.novros.intellij.example.grouped_actions.custom.CustomActionGroup"
+               popup="true"
+               text="DefaultActionGroup Inheritor" description="Default Action Group Demo">
+            <add-to-group group-id="GroupedActionsExample" anchor="last"/>
+            
+            <!-- Some action. -->
+            <action class="cz.novros.intellij.example.grouped_actions.custom.SomeAction" id="SomeAction"
+                    text="Simple Some Action" description=""/>
+        </group>
+
+        <!-- Dynamic group -->
+        <group id="BaseActionGroup" class="cz.novros.intellij.example.grouped_actions.dynamic.DynamicActionGroup"
+               popup="true"
+               text="ActionGroup Demo" description="Extending AnAction Demo">
+            <add-to-group group-id="GroupedActionsExample" anchor="last"/>
+            <!-- Action here will be dynamically added. -->
+        </group>
+    </actions>
+
+</idea-plugin>
